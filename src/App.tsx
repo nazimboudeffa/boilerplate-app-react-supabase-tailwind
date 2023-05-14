@@ -1,13 +1,14 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Footer from './components/Footer'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './components/Home'
+import Login from './components/Login'
 
 export default function App() {
   return (
-    <>
-    <Navbar />
-    <Hero />
-    <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <Home/> } />
+        <Route path="login" element={ <Login/> } />
+      </Routes>
+    </BrowserRouter>
   )
 }
